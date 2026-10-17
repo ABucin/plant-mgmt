@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-canvas: #121614;
+  --bg-container: #1A201D;
+  --bg-elevated: #242C28;
+
+  --text-primary: #E4ECE8;
+  --text-secondary: #94A69F;
+  --border-subtle: #2D3A34;
+
+  --cta-primary: #4EAD8A;
+  --cta-hover: #3E9373;
+  --text-on-cta: #0F1311;
+
+  --body-font: "Google Sans";
+  --title-font: "Playfair Display";
+
+  --margin: 15px;
+  --margin-sm: 10px;
+  --margin-xs: 5px;
+  --padding-sm: 10px;
+  --padding: 15px;
+  --padding-lg: 25px;
+  --gap: 15px;
+  --gap-lg: 30px;
+
+  --font-size-lg: 24px;
+  --font-size: 16px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
+
+  --border-radius-sm: 10px;
+  --border-radius: 15px;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0; /* Clears default browser spacing */
+  font-size: var(--font-size);
+}
+
+body {
+  background: var(--bg-canvas);
+  color: var(--text-secondary);
+  font-family: var(--body-font), sans-serif;
+  padding: var(--padding);
+}
+
+h1,h2,h3,h4 {
+  color: var(--text-primary);
+  font-family: var(--title-font), serif;
+  margin: 0 0 var(--margin) 0;
+}
+
+p, ul, ol, dl {
+  margin: 0;
+}
+
+ul {
+  padding-left: var(--padding-lg);
+}
+
+.container {
+  background: var(--bg-container);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  display: grid;
+  gap: var(--gap);
+}
+
+.container-inner {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-sm);
+  padding: var(--padding-sm);
+}
