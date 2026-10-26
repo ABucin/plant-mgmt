@@ -3,54 +3,78 @@
 
   <p>This app is all about managing plants!</p>
 
-<div class="container-layout">
-  <div class="container-inner">
-    <h3>Locations</h3>
-    <ul>
-      @for (loc of locations(); track loc.id) {
-        <li>{{ loc.name }}</li>
-      }
-    </ul>
-  </div>
-  <div class="container-inner">
-    <h3>Rooms</h3>
-    <nz-table [nzData]="rooms()" [nzFrontPagination]="false">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Temperature</th>
-        <th>Humidity</th>
-      </tr>
-      </thead>
-      <tbody>
-        @for (data of rooms(); track data.id) {
-          <tr>
-            <td>{{ data.name }}</td>
-            <td>{{ data.temperature }}°C</td>
-            <td>{{ data.humidity }}%</td>
-          </tr>
+  <div class="container-layout">
+    <div class="container-inner">
+      <h3>Locations</h3>
+      <div class="content">
+        @if (isLoadingLocations()) {
+          <nz-spin class="spinner" nzSpinning/>
+        } @else {
+          <ul>
+            @for (loc of locations(); track loc.id) {
+              <li>{{ loc.name }}</li>
+            }
+          </ul>
         }
-      </tbody>
-    </nz-table>
+      </div>
+    </div>
+    <div class="container-inner">
+      <h3>Rooms</h3>
+      <div class="content">
+        @if (isLoadingRooms()) {
+          <nz-spin class="spinner" nzSpinning/>
+        } @else {
+          <nz-table [nzData]="rooms() ?? []" [nzFrontPagination]="false">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Temperature</th>
+              <th>Humidity</th>
+              <th>Orientation</th>
+              <th>Location</th>
+            </tr>
+            </thead>
+            <tbody>
+              @for (data of rooms(); track data.id) {
+                <tr>
+                  <td>{{ data.name }}</td>
+                  <td>{{ data.temperature }}°C</td>
+                  <td>{{ data.humidity }}%</td>
+                  <td>{{ data.orientation }}</td>
+                  <td>{{ data.location?.name }}</td>
+                </tr>
+              }
+            </tbody>
+          </nz-table>
+        }
+      </div>
+    </div>
   </div>
-</div>
   <div class="container-inner">
     <h3>Plants</h3>
-    <nz-table [nzData]="plants()" [nzFrontPagination]="false">
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Name (Latin)</th>
-      </tr>
-      </thead>
-      <tbody>
-        @for (data of plants(); track data.id) {
+    <div class="content">
+      @if (isLoadingPlants()) {
+        <nz-spin class="spinner" nzSpinning/>
+      } @else {
+        <nz-table [nzData]="plants() ?? []" [nzFrontPagination]="false">
+          <thead>
           <tr>
-            <td>{{ data.name }}</td>
-            <td>{{ data.nameLatin }}</td>
+            <th>Name</th>
+            <th>Name (Latin)</th>
+            <th>Watered On</th>
           </tr>
-        }
-      </tbody>
-    </nz-table>
+          </thead>
+          <tbody>
+            @for (data of plants(); track data.id) {
+              <tr>
+                <td>{{ data.name }}</td>
+                <td>{{ data.nameLatin }}</td>
+                <td>{{ data.wateredOn | date : 'fullDate' }}</td>
+              </tr>
+            }
+          </tbody>
+        </nz-table>
+      }
+    </div>
   </div>
 </div>

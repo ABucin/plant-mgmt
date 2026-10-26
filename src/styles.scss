@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/ng-zorro-antd/ng-zorro-antd.variable.min.css';
+
 :root {
   --bg-canvas: #121614;
   --bg-container: #1A201D;
@@ -11,6 +13,29 @@
   --cta-primary: #4EAD8A;
   --cta-hover: #3E9373;
   --text-on-cta: #0F1311;
+
+  // Brand & Action Indicators
+  --ant-primary-color: var(--cta-primary);
+  --ant-primary-color-hover: var(--cta-hover);
+  --ant-primary-color-active: var(--cta-hover);
+
+  // Scaffolding & Component Backgrounds
+  --ant-body-background: var(--bg-canvas);
+  --ant-component-background: var(--bg-container);
+  --ant-popover-background: var(--bg-elevated);
+
+  // Typography & Content Reading Levels
+  --ant-text-color: var(--text-primary);
+  --ant-text-color-secondary: var(--text-secondary);
+  --ant-heading-color: var(--text-primary);
+
+  // Structural Boundaries & Layout Dividers
+  --ant-border-color-base: var(--border-subtle);
+  --ant-border-color-split: var(--border-subtle);
+
+  // Component-specific Contrast Controls
+  --ant-btn-primary-color: var(--text-on-cta);
+
 
   --body-font: "Google Sans";
   --title-font: "Playfair Display";
@@ -75,10 +100,34 @@ ul {
   border: 1px solid var(--border-subtle);
   border-radius: var(--border-radius-sm);
   padding: var(--padding-sm);
+
+  &:has(.spinner) .content {
+    display: flex;
+    width: inherit;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.spinner {
+  margin: var(--margin);
 }
 
 .container-layout {
   display: grid;
   gap: var(--gap);
   grid-template-columns: 1fr 4fr;
+}
+
+// 4. Clear out native HTML <table> inheritance defaults if you are using vanilla tables
+table,
+thead,
+tbody,
+tr,
+th,
+td {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
 }
