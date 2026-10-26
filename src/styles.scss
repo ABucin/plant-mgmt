@@ -76,3 +76,9 @@ ul {
   border-radius: var(--border-radius-sm);
   padding: var(--padding-sm);
 }
+
+.container-layout {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr 4fr;
+}

@@ -153,6 +153,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/cdk@npm:^22.0.0":
+  version: 22.2.4
+  resolution: "@angular/cdk@npm:22.2.4"
+  dependencies:
+    parse5: "npm:^8.0.0"
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/common": ^22.0.0 || ^23.0.0
+    "@angular/core": ^22.0.0 || ^23.0.0
+    "@angular/forms": ^22.0.0 || ^23.0.0
+    "@angular/platform-browser": ^22.0.0 || ^23.0.0
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 10c0/4bf72ad66298b3c8ed1b19f1ab1bbe9323281ba3489142bc74773f7cbef3a9e50c30cdff9a559b09dd058f7044e10bf0347a711afe541f346ab009007e5583b4
+  languageName: node
+  linkType: hard
+
 "@angular/cli@npm:^22.1.8":
   version: 22.2.3
   resolution: "@angular/cli@npm:22.2.3"
@@ -284,6 +300,39 @@ __metadata:
     "@angular/platform-browser": 22.2.3
     rxjs: ^6.5.3 || ^7.4.0
   checksum: 10c0/8c235ba87e8d8646b74138be858587bead58938f2baa4e9a068ef5a729669a8173f41b110daec7cf7ab1a0f59903fa5eea61149b5c7ec6c2875d20f7090d6eaf
+  languageName: node
+  linkType: hard
+
+"@ant-design/colors@npm:^7.0.0":
+  version: 7.2.1
+  resolution: "@ant-design/colors@npm:7.2.1"
+  dependencies:
+    "@ant-design/fast-color": "npm:^2.0.6"
+  checksum: 10c0/4748a0bfb1ea98e08e29dcd4f7afd2781ae2119f783e6e9f80e889fd15fc19f7137e2a3d91f26bae2ab1ee76c04d520cc35f2bb0a708cd71e463f4d9deb4192d
+  languageName: node
+  linkType: hard
+
+"@ant-design/fast-color@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "@ant-design/fast-color@npm:2.0.6"
+  dependencies:
+    "@babel/runtime": "npm:^7.24.7"
+  checksum: 10c0/8d30649bd8d4e56d5c48393fcf0ad5c24d1099ec4cbf88f55bd9f4489e61efc30087d301da384c4ed21f2d5597087c8ba27dfbcc7693915310c26d307f5a8276
+  languageName: node
+  linkType: hard
+
+"@ant-design/icons-angular@npm:^22.1.0":
+  version: 22.1.1
+  resolution: "@ant-design/icons-angular@npm:22.1.1"
+  dependencies:
+    "@ant-design/colors": "npm:^7.0.0"
+    tslib: "npm:^2.0.0"
+  peerDependencies:
+    "@angular/common": ^22.0.0
+    "@angular/core": ^22.0.0
+    "@angular/platform-browser": ^22.0.0
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 10c0/bfb4135d39dde51eeceef0e48196223620cadfb6eb9f5b90f99fd0acfc79f66d09666b2a08383212f334778ad6f0aec06f131558ac9317c0bcb154c4b01f74d9
   languageName: node
   linkType: hard
 
@@ -468,6 +517,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.24.7":
+  version: 7.29.10
+  resolution: "@babel/runtime@npm:7.29.10"
+  checksum: 10c0/32f975da8e9c2cae6b33e1a477f8fe8bbff6722c982b5ce35f99affaf3a7a1b612c8272b43afa0e51d3000928d6f3ba38f9296301115db5640264907c027b0cd
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^8.0.0":
   version: 8.0.0
   resolution: "@babel/template@npm:8.0.0"
@@ -577,6 +633,13 @@ __metadata:
   version: 4.0.2
   resolution: "@csstools/css-tokenizer@npm:4.0.2"
   checksum: 10c0/748b42450064cca6a54d2bb8a719cb765c6433b8988ed8855f39c9814b8ef30c4daab235ffee9dacb0388916d6e250ec6bee454e8353d06161228e129e4272ae
+  languageName: node
+  linkType: hard
+
+"@ctrl/tinycolor@npm:^3.6.0":
+  version: 3.6.1
+  resolution: "@ctrl/tinycolor@npm:3.6.1"
+  checksum: 10c0/444d81612cd8c5c802a3d1253df83d5f77d3db87f351861655683a4743990e6b38976bf2e4129591c5a258607b63574b3c7bed702cf6a0eb7912222edf4570e9
   languageName: node
   linkType: hard
 
@@ -2359,6 +2422,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"date-fns@npm:^4.1.0":
+  version: 4.4.0
+  resolution: "date-fns@npm:4.4.0"
+  checksum: 10c0/988f0a13db183f5dfc85c36bbb6847a9c135a9225888bbea4005876ec15539a8613c21a07370a4e7ea543918d5a1cafb423c528b42cdbbde5fdfddb178126b21
+  languageName: node
+  linkType: hard
+
 "debug@npm:4, debug@npm:^4.3.4":
   version: 4.4.3
   resolution: "debug@npm:4.4.3"
@@ -3235,6 +3305,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ng-zorro-antd@npm:^22.1.2":
+  version: 22.1.2
+  resolution: "ng-zorro-antd@npm:22.1.2"
+  dependencies:
+    "@angular/cdk": "npm:^22.0.0"
+    "@ant-design/icons-angular": "npm:^22.1.0"
+    "@ctrl/tinycolor": "npm:^3.6.0"
+    date-fns: "npm:^4.1.0"
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/common": ^22.0.0
+    "@angular/core": ^22.0.0
+    "@angular/forms": ^22.0.0
+    "@angular/platform-browser": ^22.0.0
+    "@angular/router": ^22.0.0
+  checksum: 10c0/2f894a693c0235c362b3369b19f635311515faf21857e7acd787ad902920b110cf2e7ebf6a08b823da3fdbd03dbafefbd5356939a1849a6c2faad9adf9855850
+  languageName: node
+  linkType: hard
+
 "node-addon-api@npm:^6.1.0":
   version: 6.1.0
   resolution: "node-addon-api@npm:6.1.0"
@@ -3514,6 +3603,7 @@ __metadata:
     "@angular/platform-browser": "npm:^22.1.0"
     "@angular/router": "npm:^22.1.0"
     jsdom: "npm:^28.0.0"
+    ng-zorro-antd: "npm:^22.1.2"
     prettier: "npm:^3.9.10"
     rxjs: "npm:~7.8.0"
     tslib: "npm:^2.3.0"
@@ -4202,7 +4292,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.1.0, tslib@npm:^2.3.0":
+"tslib@npm:^2.0.0, tslib@npm:^2.1.0, tslib@npm:^2.3.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62

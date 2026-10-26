@@ -1,26 +1,28 @@
-import { Component, inject, Signal } from '@angular/core'
-import { RouterOutlet } from '@angular/router'
-import { HouseService } from './services/house.service'
-import { House } from './models/house.model'
-import { toSignal } from '@angular/core/rxjs-interop'
-import { map } from 'rxjs'
-import { PlantService } from './services/plant.service'
-import { RoomService } from './services/room.service'
-import { Room } from './models/room.model'
-import { Plant } from './models/plant.model'
+import { Component, inject, Signal } from '@angular/core';
+import { LocationService } from './services/location.service';
+import { Location } from './models/location.model';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs';
+import { PlantService } from './services/plant.service';
+import { RoomService } from './services/room.service';
+import { Room } from './models/room.model';
+import { Plant } from './models/plant.model';
+import { NzTableComponent } from 'ng-zorro-antd/table';
 
 @Component({
-    imports: [RouterOutlet],
+    imports: [
+        NzTableComponent,
+    ],
     selector: 'app-root',
     styleUrl: './app.scss',
     templateUrl: './app.html',
 })
 export class App {
-    protected readonly homeService = inject(HouseService);
+    protected readonly homeService = inject(LocationService);
     protected readonly roomService = inject(RoomService);
     protected readonly plantService = inject(PlantService);
 
-    public houses: Signal<House[]> = toSignal(this.homeService.getAll().pipe(map((r) => r.data)), {
+    public locations: Signal<Location[]> = toSignal(this.homeService.getAll().pipe(map((r) => r.data)), {
         initialValue: [],
     });
 

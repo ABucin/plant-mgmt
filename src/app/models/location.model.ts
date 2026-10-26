@@ -1,5 +1,5 @@
 import { Entity } from './utils.model';
 
-export interface House extends Entity {
+export interface Location extends Entity {
   name: string;
 }

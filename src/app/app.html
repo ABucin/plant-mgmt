@@ -3,28 +3,54 @@
 
   <p>This app is all about managing plants!</p>
 
+<div class="container-layout">
   <div class="container-inner">
-    <h3>Houses</h3>
+    <h3>Locations</h3>
     <ul>
-      @for (house of houses(); track house.id) {
-        <li>{{ house.name }}</li>
+      @for (loc of locations(); track loc.id) {
+        <li>{{ loc.name }}</li>
       }
     </ul>
   </div>
   <div class="container-inner">
     <h3>Rooms</h3>
-    <ul>
-      @for (room of rooms(); track room.id) {
-        <li>{{ room.name }} | {{ room.temperature }} | {{ room.humidity }}%</li>
-      }
-    </ul>
+    <nz-table [nzData]="rooms()" [nzFrontPagination]="false">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Temperature</th>
+        <th>Humidity</th>
+      </tr>
+      </thead>
+      <tbody>
+        @for (data of rooms(); track data.id) {
+          <tr>
+            <td>{{ data.name }}</td>
+            <td>{{ data.temperature }}°C</td>
+            <td>{{ data.humidity }}%</td>
+          </tr>
+        }
+      </tbody>
+    </nz-table>
   </div>
+</div>
   <div class="container-inner">
     <h3>Plants</h3>
-    <ul>
-      @for (plant of plants(); track plant.id) {
-        <li><strong>{{ plant.name }}</strong> | <em>{{ plant.nameLatin }}</em></li>
-      }
-    </ul>
+    <nz-table [nzData]="plants()" [nzFrontPagination]="false">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Name (Latin)</th>
+      </tr>
+      </thead>
+      <tbody>
+        @for (data of plants(); track data.id) {
+          <tr>
+            <td>{{ data.name }}</td>
+            <td>{{ data.nameLatin }}</td>
+          </tr>
+        }
+      </tbody>
+    </nz-table>
   </div>
 </div>
